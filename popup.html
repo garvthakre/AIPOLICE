@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AI Detector Settings</title>
+  <title>AI Website Monitor</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 15px;
+    }
+    #status {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    .keyword {
+      display: inline-block;
+      background: #e9ecef;
+      padding: 2px 8px;
+      margin: 2px;
+      border-radius: 3px;
+    }
+  </style>
 </head>
 <body>
-  <h1>AI Detector</h1>
-  <p>This extension alerts when AI websites are accessed.</p>
-  <button id="test-beep">Test Beep</button>
+  <h2>AI Website Monitor</h2>
+  <p>Monitoring for these keywords:</p>
+  <div id="keywordList"></div>
+  <div id="status">
+    <h3>Monitor Status</h3>
+    <p>Last detection: <span id="lastDetection">None</span></p>
+    <p>Total detections: <span id="detectionCount">0</span></p>
+  </div>
+  <button id="testBeep">Test Beep</button>
   <script src="popup.js"></script>
 </body>
 </html>
